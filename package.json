@@ -1,0 +1,64 @@
+{
+  "name": "jsonify-webpack-plugin",
+  "version": "0.0.1",
+  "description": "Creates JSON file with file name and stringified code",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/index.js",
+    "dist/src/index.d.ts"
+  ],
+  "author": "Junichi Sugiura <junichi.sugiura@dappface.com> (https://github.com/LukeSugiura)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dappface/jsonify-webpack-plugin.git"
+  },
+  "homepage": "https://github.com/dappface/jsonify-webpack-plugin#readme",
+  "bugs": "https://github.com/dappface/jsonify-webpack-plugin/issues",
+  "contributors": [
+    {
+      "name": "Junichi Sugiura",
+      "email": "junichi.sugiura@dappface.com",
+      "url": "https://github.com/LukeSugiura"
+    }
+  ],
+  "scripts": {
+    "build": "webpack",
+    "coverage": "jest --coverage",
+    "lint": "eslint './**' --ext .json,.js,.ts --ignore-path .gitignore",
+    "lint:fix": "npm run lint -- --fix",
+    "open:coverage": "open -a 'Google Chrome' ./coverage/lcov-report/index.html",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "watch": "webpack --watch"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.2",
+    "@types/rimraf": "^2.0.2",
+    "@types/webpack": "^4.4.35",
+    "@typescript-eslint/eslint-plugin": "^1.12.0",
+    "@typescript-eslint/parser": "^1.12.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^24.0.2",
+    "ts-loader": "^6.0.4",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "json",
+    "jsonify-webpack-plugin"
+  ]
+}

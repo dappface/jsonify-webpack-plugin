@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  codecov: codecov/codecov@1.0.5
+
 executors:
   default:
     working_directory: ~/repo
@@ -46,10 +49,9 @@ jobs:
       - restore_npm
       - run:
           name: Test
-          command: npm run test
-      - run:
-          name: Upload Coverage
-          command: npm run codecov
+          command: npm run test -- --coverage
+      - codecov/upload:
+          file: ./coverage/lcov.info
   build:
     executor:
       name: default
@@ -85,7 +87,7 @@ workflows:
       - build:
           requires:
             - lint
-            - setup
+            - test
       - deploy:
           requires:
             - build

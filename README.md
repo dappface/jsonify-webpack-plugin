@@ -54,7 +54,7 @@ I had situation once that I need to import bundled JavaScript code in React Nati
 Metro bundler doesn't support importing .js file as a raw string so that I needed to convert a bundle.js file into either .json or .txt format.
 </p>
 
-[codecov-svg]: https://codecov.io/gh/dappface/jsonify-webpac-plugin/branch/master/graph/badge.svg
-[codecov-link]: https://codecov.io/gh/dappface/jsonify-webpack-plugin
 [circleci-svg]: https://circleci.com/gh/dappface/jsonify-webpack-plugin.svg?style=svg
 [circleci-link]: https://circleci.com/gh/dappface/jsonify-webpack-plugin
+[codecov-svg]: https://codecov.io/gh/dappface/jsonify-webpack-plugin/branch/master/graph/badge.svg
+[codecov-link]: https://codecov.io/gh/dappface/jsonify-webpack-plugin

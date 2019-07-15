@@ -1,6 +1,6 @@
 version: 2.1
 
-orbs:
+orbs:	
   codecov: codecov/codecov@1.0.5
 
 executors:
@@ -94,4 +94,6 @@ workflows:
           filters:
             tags:
               only: /^v.*/
+            branches:
+              ignore: /.*/
 

@@ -69,7 +69,7 @@ jobs:
       - restore_npm
       - run:
           name: Prepare npm token
-          command: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+          command: npm set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
       - run:
           name: Publish to npm
           command: npm publish .

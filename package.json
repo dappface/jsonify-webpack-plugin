@@ -25,6 +25,7 @@
   ],
   "scripts": {
     "build": "webpack",
+    "codecov": "codecov --token=${CODECOV_TOKEN}",
     "coverage": "jest --coverage",
     "lint": "eslint . --ext .js --ext .ts --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
@@ -41,6 +42,7 @@
     "@typescript-eslint/eslint-plugin": "^1.12.0",
     "@typescript-eslint/parser": "^1.12.0",
     "clean-webpack-plugin": "^3.0.0",
+    "codecov": "^3.5.0",
     "eslint": "^6.0.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",

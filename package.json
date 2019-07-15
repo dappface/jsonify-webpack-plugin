@@ -25,7 +25,6 @@
   ],
   "scripts": {
     "build": "webpack",
-    "coverage": "jest --coverage",
     "lint": "eslint './**' --ext .json,.js,.ts --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
     "open:coverage": "open -a 'Google Chrome' ./coverage/lcov-report/index.html",

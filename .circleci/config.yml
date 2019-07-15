@@ -49,7 +49,7 @@ jobs:
       - restore_npm
       - run:
           name: Test
-          command: npm run test
+          command: npm run test -- --coverage
       - codecov/upload:
           file: ./coverage/lcov.info
   build:

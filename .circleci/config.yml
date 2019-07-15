@@ -77,17 +77,29 @@ jobs:
 workflows:
   setup_and_deploy:
     jobs:
-      - setup
+      - setup:
+          filters:
+            tags:
+              only: /^v.*/
       - lint:
           requires:
             - setup
+          filters:
+            tags:
+              only: /^v.*/
       - test:
           requires:
             - setup
+          filters:
+            tags:
+              only: /^v.*/
       - build:
           requires:
             - lint
             - test
+          filters:
+            tags:
+              only: /^v.*/
       - deploy:
           requires:
             - build

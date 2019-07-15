@@ -77,7 +77,7 @@ jobs:
 workflows:
   setup_and_deploy:
     jobs:
-      - setup
+      - setup:
           filters:
             tags:
               only: /^v.*/

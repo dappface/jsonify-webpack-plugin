@@ -101,6 +101,7 @@ workflows:
             tags:
               only: /^v.*/
       - deploy:
+          context: npm
           requires:
             - build
           filters:

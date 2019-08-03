@@ -35,7 +35,7 @@ jobs:
       - restore_npm
       - run:
           name: Install Dependencies
-          command: npm install
+          command: npm install --no-save
       - save_npm
   lint:
     executor:

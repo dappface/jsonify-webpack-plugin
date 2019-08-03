@@ -101,11 +101,6 @@ workflows:
           requires:
             - lint
             - test
-          filters:
-            tags:
-              only: /^v.*/
-            branches:
-              only: /.*/
       - build_and_deploy:
           context: npm
           requires:

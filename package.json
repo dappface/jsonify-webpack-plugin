@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "description": "Creates JSON file with file name and stringified code",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/src/index.d.ts",
   "files": [
     "dist/index.js",
     "dist/src/index.d.ts"

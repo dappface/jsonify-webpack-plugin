@@ -4,7 +4,7 @@ import { Configuration } from 'webpack'
 import pkg from './package.json'
 
 const config: Configuration = {
-  mode: 'production',
+  mode: 'development',
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),

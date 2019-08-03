@@ -19,7 +19,7 @@ commands:
       - save_cache:
           key: npm-{{ checksum "package-lock.json" }}
           paths:
-            - ./node_modules
+            - ~/repo/node_modules
   build:
     steps:
       - run:

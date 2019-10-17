@@ -14,22 +14,21 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "10.16.3"
-      - name: Show GITHUB_REF env
-        run: echo ${GITHUB_REF}
-#       - name: Bump version
-#         run: |
-#           git config user.email "junichi.sugiura@dappface.com"
-#           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
-#           git checkout master
-#           npm version ${GITHUB_REF} --no-git-tag-version
-#           git commit -m "Bunp package version to ${GITHUB_REF}"
-#       - name: Install dependencies
-#         run: npm i
-#       - name: Build
-#         run: npm run build
-#       - name: Prepare npm token
-#         run: npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
-#       - name: Publish to npm
-#         run: npm publish .
-#       - name: Push version change to GitHub
-#         run: git push origin master
+      - name: Bump version
+        run: |
+          git config user.email "junichi.sugiura@dappface.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
+          git checkout master
+          version=$(basename ${GITHUB_REF})
+          npm version ${version} --no-git-tag-version
+          git commit -m "Bunp package version to ${version}"
+      - name: Install dependencies
+        run: npm i
+      - name: Build
+        run: npm run build
+      - name: Prepare npm token
+        run: npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+      - name: Publish to npm
+        run: npm publish .
+      - name: Push version change to GitHub
+        run: git push origin master

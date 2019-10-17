@@ -34,7 +34,6 @@ const baseConfig: webpack.Configuration = {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function createPluginFactory(option?: any): () => void {
   return (): void => {
-    // @ts-ignore
     new JsonifyWebpackPlugin(option)
   }
 }

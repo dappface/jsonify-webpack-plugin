@@ -19,7 +19,7 @@ export class JsonifyWebpackPlugin implements Plugin {
 
   private fileNames: string[]
 
-  private outputFilename: string = 'index.json'
+  private outputFilename = 'index.json'
 
   constructor(fileNames: string[]) {
     JsonifyWebpackPlugin.validateOptions(fileNames)

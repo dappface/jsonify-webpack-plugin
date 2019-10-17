@@ -17,6 +17,7 @@ jobs:
       - name: Bump version
         run: |
           git config user.email "junichi.sugiura@dappface.com"
+          git config user.name "LukeSugiura"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
           git checkout master
           version=$(basename ${GITHUB_REF})

@@ -1,4 +1,5 @@
-[![CircleCI][circleci-svg]][circleci-link]
+[![Build Status][build-status-svg]][build-status-link]
+[![Lint Status][lint-status-svg]][lint-status-link]
 [![codecov][codecov-svg]][codecov-link]
 
 <div align="center">
@@ -22,6 +23,7 @@
 <h2 align="center">Usage</h2>
 
 **webpack.config.js**
+
 ```js
 const JsonifyWebpackConfig = require('jsonify-webpack-plugin')
 const path = require('path')
@@ -32,9 +34,7 @@ module.exports = {
     path: path.resolve(__dirname + 'dist'),
     filename: 'bundle.js'
   },
-  plugins: [
-    new JsonifyWebpackPlugin(['bundle.js'])
-  ]
+  plugins: [new JsonifyWebpackPlugin(['bundle.js'])]
 }
 ```
 
@@ -54,7 +54,9 @@ I had situation once that I need to import bundled JavaScript code in React Nati
 Metro bundler doesn't support importing .js file as a raw string so that I needed to convert a bundle.js file into either .json or .txt format.
 </p>
 
-[circleci-svg]: https://circleci.com/gh/dappface/jsonify-webpack-plugin.svg?style=svg
-[circleci-link]: https://circleci.com/gh/dappface/jsonify-webpack-plugin
+[build-status-svg]: https://github.com/dappface/jsonify-webpack-plugin/workflows/Build/badge.svg
+[build-status-link]: https://github.com/dappface/jsonify-webpack-plugin/actions?workflow=Build
+[lint-status-svg]: https://github.com/dappface/jsonify-webpack-plugin/workflows/Lint/badge.svg
+[lint-status-link]: https://github.com/dappface/jsonify-webpack-plugin/actions?workflow=Lint
 [codecov-svg]: https://codecov.io/gh/dappface/jsonify-webpack-plugin/branch/master/graph/badge.svg
 [codecov-link]: https://codecov.io/gh/dappface/jsonify-webpack-plugin

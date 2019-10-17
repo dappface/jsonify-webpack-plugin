@@ -26,7 +26,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Prepare npm token
-        run: npm set //registry.npmjs.org/:_authToken ${{ secret.NPM_TOKEN }}
+        run: npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
       - name: Publish to npm
         run: npm publish .
       - name: Push version change to GitHub

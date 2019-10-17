@@ -1,6 +1,6 @@
 {
   "name": "jsonify-webpack-plugin",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Creates JSON file with file name and stringified code",
   "main": "dist/index.js",
   "types": "dist/src/index.d.ts",

@@ -1,9 +1,11 @@
-name: Build
+name: Deploy
 
-on: push
+on:
+  release:
+    types: [published]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout source code
@@ -16,5 +18,7 @@ jobs:
         run: npm i
       - name: Build
         run: npm run build
-      - name: Dry run publish
-        run: npm publish --dry-run
+      - name: Prepare npm token
+        run: npm set //registry.npmjs.org/:_authToken ${{ secret.NPM_TOKEN }}
+      - name: Publish to npm
+        run: npm publish .

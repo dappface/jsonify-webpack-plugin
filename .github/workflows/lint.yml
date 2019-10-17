@@ -3,7 +3,7 @@ name: Lint
 on: push
 
 jobs:
-  javascript:
+  lint:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout source code

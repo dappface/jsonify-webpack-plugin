@@ -22,6 +22,7 @@ jobs:
           git checkout master
           version=$(basename ${GITHUB_REF})
           npm version ${version} --no-git-tag-version
+          git add -A
           git commit -m "Bunp package version to ${version}"
       - name: Install dependencies
         run: npm i

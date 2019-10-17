@@ -30,6 +30,7 @@
     "open:coverage": "open -a 'Google Chrome' ./coverage/lcov-report/index.html",
     "test": "jest",
     "test:watch": "jest --watch",
+    "upgrade-interactive": "npx npm-check --update",
     "watch": "webpack --watch"
   },
   "devDependencies": {
